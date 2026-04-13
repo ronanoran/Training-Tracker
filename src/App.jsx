@@ -685,10 +685,11 @@ export default function App() {
         ::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:#1a2830;border-radius:3px;}
         input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;}
         input[type=date]::-webkit-calendar-picker-indicator{filter:invert(0.3);}
+        body{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);background:#080c10;}
       `}</style>
 
       {/* HEADER */}
-      <div style={{ background: C.surface, borderBottom: `1px solid ${C.border}`, padding: "14px 16px 0", position: "sticky", top: 0, zIndex: 100 }}>
+      <div style={{ background: C.surface, borderBottom: `1px solid ${C.border}`, padding: "14px 16px 0", paddingTop: "max(14px, env(safe-area-inset-top))", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 480, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 11 }}>
             <div>
